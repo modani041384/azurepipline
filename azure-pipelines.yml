@@ -8,9 +8,6 @@ trigger:
 
 variables:
 
-  # Web app name
-  webAppName: 'flask-ml-service'
-
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
@@ -25,8 +22,6 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool:
-      vmImage: $(vmImageName)
     steps:
     - task: UsePythonVersion@0
       inputs:
